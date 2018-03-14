@@ -6,4 +6,4 @@
 2.6.9
 pypy-5.7.1
 pypy3.5-5.10.1
-pypy3.3-5.5-alpha1
+pypy3.3-5.5-alpha

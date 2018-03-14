@@ -21,9 +21,9 @@ RUN set -x && \
     gosu nobody true && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pyenv local 3.6.0 && \
+RUN pyenv local 3.6.4 && \
     python -m pip install -U pip && \
-    python -m pip install tox==2.3.2 && \
+    python -m pip install tox==2.9.1 && \
     pyenv local --unset && \
     pyenv rehash
 
