@@ -23,7 +23,7 @@ RUN set -x && \
 
 RUN pyenv local 3.7.6 && \
     python -m pip install -U pip && \
-    python -m pip install tox==3.14.0 && \
+    python -m pip install tox==3.14.5 && \
     pyenv local --unset && \
     pyenv rehash
 
