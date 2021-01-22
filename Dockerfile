@@ -21,9 +21,12 @@ RUN set -x && \
     gosu nobody true && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pyenv local 3.7.5 && \
+ENV TOX_PYTHON_VERSION 3.9.1
+ENV TOX_VERSION 3.21.2
+
+RUN pyenv local $TOX_PYTHON_VERSION && \
     python -m pip install -U pip && \
-    python -m pip install tox==3.14.0 && \
+    python -m pip install tox==$TOX_VERSION && \
     pyenv local --unset && \
     pyenv rehash
 
